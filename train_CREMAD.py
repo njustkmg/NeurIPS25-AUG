@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
@@ -225,4 +224,5 @@ if __name__ == '__main__':
                 model.add_layer(is_a=False)
             elif ratio_a < args.lam-0.01:
                 print("add_layer_a")
+
                 model.add_layer(is_a=True)
