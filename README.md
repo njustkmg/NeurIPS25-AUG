@@ -65,18 +65,12 @@ $ python train_CREMAD.py --config ./data/crema.json
 If you find this work useful, consider giving this repository a star ⭐️ and citing 📑 our paper as follows:
 
 ```bibtex
-
 @inproceedings{Jiang2025aug,
-
   title={Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion},
-
   author={Qingyuan Jiang and Longfei Huang and Yang Yang},
-
   booktitle={NeurIPS},
-
   year={2025},
 }
-
 ```
 
 ## Acknowledgememnt
