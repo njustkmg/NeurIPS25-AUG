@@ -1,12 +1,34 @@
 # Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion
-This is the official code for the paper "Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion".
 
-## Introduction
-The existence of modality imbalance hinders multimodal learning from achieving its expected superiority over unimodal models in practice. In this paper, we propose a novel multimodal learning approach to dynamically balance the classification ability of weak and strong modalities by designing a sustained boosting algorithm. Concretely, we first propose a sustained boosting algorithm in multimodal learning by simultaneously optimizing the classification and residual errors. Subsequently, we introduce an adaptive classifier assignment strategy to dynamically facilitate the classification performance of the weak modality. Furthermore, we theoretically analyze the convergence property of the cross-modal gap function, ensuring the effectiveness of the proposed boosting scheme. To this end, the classification ability of strong and weak modalities is expected to be balanced, thereby mitigating the imbalance issue.
+This repo is the official implementation of AUG proposed in "Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion".
 
-## Installation
+**Paper Title: "Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion"**
 
-**Requirements**
+**Authors: [Qingyuan Jiang](https://jiangqy.github.io/), [Longfei Huang](https://hlf404.github.io/), and [Yang Yang](http://home.njustkmg.cn:4056/Introduction-cn.html)**
+
+**Accepted by: NIPS 2025, Oral**
+
+**[[arXiv]()]** 
+
+## ✨ Motivation
+
+### **What is the modality imbalance challenging in multimodal learning?**
+
+Multimodal Learning (MML) is expected to achieve better performance compared with unimodal approaches. However, contrary to expectations, MML has been surprisingly shown to underperform compared to unimodal ones in certain scenarios. **Capability discrepancies across heterogeneous models play a crucial role in causing modality imbalance.**
+
+## 📖 Overview
+
+### **What do we do to balance the model capability?**
+
+We propose AUG approach to dynamically balance the classification ability of weak and strong modalities. Firstly, we propose a sustained boosting algorithm in multimodal learning by simultaneously optimizing the classification and residual errors. Subsequently, we introduce an adaptive classifier assignment strategy to dynamically facilitate the classification performance of the weak modality. We mitigate the imbalance issue as shown in the following figure.
+
+<div  align="center">    
+<img src="image/intro.png" width = "80%" />
+</div>
+
+## 🚀 Quick Start
+
+## Requirement
 
 * python 3.8
 * pytorch 1.11.0
@@ -17,30 +39,48 @@ The existence of modality imbalance hinders multimodal learning from achieving i
 * scikit-learn 1.3.2
 * transformers 4.36.2
 
-## Pretrained model for NVGesture
+### Data Preparation
 
-Model Download [link](https://github.com/piergiaj/pytorch-i3d/tree/master/models)
+This repository needs CREMAD, Kinetics-Sounds, Sarcasm, Twitter15, VGGSound, and NVGresutre Datasets.
+Download Original Dataset：
+[CREMA-D](https://github.com/CheyneyComputerScience/CREMA-D),
+[Kinetics-Sounds](https://github.com/cvdfoundation/kinetics-dataset),
+[Sarcasm](https://github.com/feiLinX/Multi-modal-Sarcasm-Detection),
+[Twitter15](https://github.com/jefferyYu/TomBERT),
+[VGGSound](https://www.robots.ox.ac.uk/~vgg/data/vggsound/),
+[NVGresutre](https://research.nvidia.com/publication/2016-06_online-detection-and-classification-dynamic-hand-gestures-recurrent-3d),
 
-## Dataset
+The data processing details are in [OGM-GE](https://github.com/GeWu-Lab/OGM-GE_CVPR2022/tree/main) and [AMSS](https://github.com/njustkmg/TPAMI-AMSS).
 
-Download Dataset: 
+### RUN
 
-1. CREMAD Dataset [CREMAD](https://github.com/CheyneyComputerScience/CREMA-D)
-
-2. Kinetics-Sounds Dataset [Kinetics-Sounds](https://github.com/cvdfoundation/kinetics-dataset)
-
-3. NVGresutre Dataset [NVGresutre](https://research.nvidia.com/publication/2016-06_online-detection-and-classification-dynamic-hand-gestures-recurrent-3d)
-
-Data Pre-processing
-
-You can prepare the data according the instructions of the cited paper.
-
-## Training
-
-For training, we provide hyper-parameter settings in `/data/`. You can running command for each dataset.
-
-### CREMA-D
+We provide hyper-parameter settings in `/data/`. The code uses the CREMA-D dataset as an example. You can simply run the code using:
 
 ```bash
 $ python train_CREMAD.py --config ./data/crema.json
 ```
+
+## 📘 Citation
+
+If you find this work useful, consider giving this repository a star ⭐️ and citing 📑 our paper as follows:
+
+```bibtex
+
+@inproceedings{Jiang2025aug,
+
+  title={Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion},
+
+  author={Qingyuan Jiang and Longfei Huang and Yang Yang},
+
+  booktitle={NeurIPS},
+
+  year={2025},
+}
+
+```
+
+## Acknowledgememnt
+
+We thank the following repos providing helpful components/functions in our work. 
+* [OGM-GE](https://github.com/GeWu-Lab/OGM-GE_CVPR2022),
+* [AMSS](https://github.com/njustkmg/TPAMI-AMSS).
