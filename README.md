@@ -2,7 +2,7 @@
 
 This repo is the official implementation of AUG proposed in "Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion".
 
-**Paper Title: "Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion"**
+**"Rethinking Multimodal Learning from the Perspective of Mitigating Classification Ability Disproportion"**
 
 **Authors: [Qingyuan Jiang](https://jiangqy.github.io/), [Longfei Huang](https://hlf404.github.io/), and [Yang Yang](http://home.njustkmg.cn:4056/Introduction-cn.html)**
 
