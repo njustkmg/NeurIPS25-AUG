@@ -78,3 +78,4 @@ If you find this work useful, consider giving this repository a star ⭐️ and 
 We thank the following repos providing helpful components/functions in our work. 
 * [OGM-GE](https://github.com/GeWu-Lab/OGM-GE_CVPR2022),
 * [AMSS](https://github.com/njustkmg/TPAMI-AMSS).
+* [LFM](https://github.com/njustkmg/NeurIPS24-LFM)
